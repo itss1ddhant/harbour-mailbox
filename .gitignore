@@ -1,0 +1,15 @@
+node_modules/
+.next/
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.env
+.env.local
+*.zip
+next-env.d.ts
+*.tsbuildinfo
+.vercel
+.claude/
+private/

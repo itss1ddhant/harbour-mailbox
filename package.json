@@ -1,0 +1,37 @@
+{
+  "name": "harbour-mailbox",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:setup": "tsx scripts/setup-db.ts",
+    "db:reset": "tsx scripts/reset-db.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.10",
+    "drizzle-orm": "^0.45.4",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "drizzle-kit": "^0.31.11",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0",
+    "vitest": "^5.1.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

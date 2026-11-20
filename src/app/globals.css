@@ -1,0 +1,48 @@
+/* THE STYLESHEET
+   Almost all styling is done with Tailwind class names written directly on the elements
+   in the pages (for example class "rounded-lg border p-4"). This file only:
+     1. loads Tailwind,
+     2. sets the page background and text colour,
+     3. defines a handful of named styles that are repeated all over the app
+        (.btn, .btn-primary, .btn-note, .field, .label, .card, .badge), so a button looks
+        the same everywhere and can be restyled in one place.
+   "@apply" means "this class is made of these Tailwind classes". */
+@import "tailwindcss";
+
+body {
+  background: #f6f7f9;
+  color: #1e293b;
+}
+
+@layer components {
+  /* Ordinary button (white). */
+  .btn {
+    @apply inline-flex cursor-pointer items-center rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:cursor-wait disabled:opacity-60;
+  }
+  /* The main action on a screen, and anything that reaches the client (teal). */
+  .btn-primary {
+    @apply inline-flex cursor-pointer items-center rounded-md border border-teal-700 bg-teal-700 px-3 py-1.5 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-wait disabled:opacity-60;
+  }
+  /* Internal-note button (amber), matching the amber of internal notes. */
+  .btn-note {
+    @apply inline-flex cursor-pointer items-center rounded-md border border-amber-600 bg-amber-500 px-3 py-1.5 text-sm font-medium text-white hover:bg-amber-600 disabled:cursor-wait disabled:opacity-60;
+  }
+  /* Text inputs, text areas and drop-downs; .label is the small caption above one. */
+  .field {
+    @apply w-full rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-sm focus:border-teal-600 focus:outline-none;
+  }
+  .label {
+    @apply mb-1 block text-xs font-medium text-slate-600;
+  }
+  /* White box with a border; .badge is a small rounded label such as "Unowned". */
+  .card {
+    @apply rounded-lg border border-slate-200 bg-white;
+  }
+  .badge {
+    @apply inline-block rounded-full px-2 py-0.5 text-xs font-medium whitespace-nowrap;
+  }
+  /* The clickable title of a collapsible <details> section. */
+  summary {
+    @apply cursor-pointer select-none;
+  }
+}
