@@ -100,10 +100,8 @@ The test suite contains **44 tests** covering authorization and client isolation
 | `npm run db:generate` | Generate migrations after schema changes |
 
 ## Documentation
-
-- [SUBMISSION_OVERVIEW.md](SUBMISSION_OVERVIEW.md) — Product decisions, architecture, validation, known limitations and priorities.
-- [DEMO_ACCOUNTS.md](DEMO_ACCOUNTS.md) — Demo account roles, emails and password setup.
+- [DEMO_ACCOUNTS.md](DEMO_ACCOUNTS.md) — Demo account roles, emails and password setup to be shared.
 
 ## Current Scope
 
-The demo uses a client portal instead of live email ingestion/delivery. Attachments, notifications, and account administration are not implemented. These constraints are deliberate for the take-home scope and are discussed in the submission overview.
+The demo uses a client portal instead of live email ingestion/delivery. Attachments, notifications, and account administration are not implemented. These constraints are deliberate for the limited scope and are discussed in the submission overview.
